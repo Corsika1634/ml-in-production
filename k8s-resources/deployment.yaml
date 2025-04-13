@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ml-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-ml
+  template:
+    metadata:
+      labels:
+        app: app-ml
+    spec:
+      containers:
+        - name: app-ml-container
+          image: katerynakomissarova/app-ml:latest
+          ports:
+            - containerPort: 8000

@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: app-ml-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: app-ml-container
+          image: katerynakomissarova/app-ml:latest
+          command: ["python", "-m", "http.server", "8000"]
+      restartPolicy: Never
+  backoffLimit: 2

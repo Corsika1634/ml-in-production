@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-ml-pod
+spec:
+  containers:
+    - name: app-ml-container
+      image: katerynakomissarova/app-ml:latest
+      ports:
+        - containerPort: 8000
