@@ -1,5 +1,6 @@
 # Example dependencies
 numpy
-pandas
-scikit-learn
-tensorflow
+pandas==2.2.2
+scikit-learn==1.4.2
+tensorflow==2.16.1
+pyarrow
